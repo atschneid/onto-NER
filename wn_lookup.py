@@ -31,7 +31,7 @@ class WN_Lookup:
             print('word {}'.format(word))
             words += [word]
 
-        self.get_synsets_recursively(wn.synsets(word))
+        self.get_synsets_recursively(wn.synsets(words[0]))
         self.overfrequent_synsets = self.skip_set.copy()
         print('overfrequent synsets : {}'.format(self.overfrequent_synsets))
         for word in words[1:]:
